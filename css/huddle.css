@@ -1,0 +1,425 @@
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  font-size: 18px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  position: relative;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+
+/* =====================================================*/
+/*.landing {
+   height: 100vh; */
+  /* background-image: url(../imgs/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3; 
+}
+/* .landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--Very-Pale-Cyan);
+  opacity: 0.5;
+  z-index: 0;
+} */
+.landing .container {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 2;
+}
+.landing .header {
+  /* padding-top: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing .header a {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 2.5;
+  border: 1px solid var(--Pink);
+  color: var(--Pink);
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: white;
+  transition: 0.3s;
+}
+.landing .header a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 778px) {
+  /* .landing {
+    height: 100%;
+    min-width: 100%;
+    background-image: url(../imgs/bg-hero-mobile.svg);
+    background-size: 100%;
+  } */
+  .landing .header img {
+    width: 150px;
+  }
+  .landing .header a {
+    width: 150px;
+    height: 50px;
+  }
+}
+/*----------------------------------------*/
+.landing .landing-content {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+}
+
+.landing .landing-content h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.landing .landing-content p {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  width:50%;
+  margin:0 auto;
+}
+
+.landing .landing-content a {
+  display: block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  width: 400px;
+  padding: 30px 0;
+  background-color: var(--Pink);
+  color: white;
+  border-radius: 40px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0px 2px 0px 0px hsl(192deg 100% 9% / 38%);
+}
+.landing .landing-content a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.landing .landing-content img {
+  max-width: 100%;
+  margin: 30px auto;
+}
+@media (max-width: 778px) {
+
+  .landing .landing-content h1 {
+    font-size: 2.5rem;
+  }
+  .landing .landing-content p {
+    width:100%;
+  }
+  .landing .landing-content .left-content a {
+    margin: 0 auto;
+  }
+}
+/* ===================================================*/
+.statics .container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align: center;
+  justify-content: center;
+  margin: 100px auto;
+}
+.statics .container .section{
+  margin: 0 auto;
+}
+.statics .container .section .value{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  position: relative;
+}
+.statics .container .section .value span{
+  position: relative;
+  width: fit-content;
+}
+.statics .container .section:first-child .value .num::before{
+  content:"" ;
+  background-image: url(../imgs/icon-communities.svg);
+  background-repeat: no-repeat;
+  width:50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 25px;
+  transform: translateX(-50%);
+}
+.statics .container .section:last-child .value .num::before{
+  content:"" ;
+  background-image: url(../imgs/icon-messages.svg);
+  background-repeat: no-repeat;
+  width:50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 25px;
+  transform: translateX(-50%);
+}
+.statics .container .section .value span:first-child{
+  font-size: 5rem;
+}
+.statics .container .section .value span:last-child{
+  font-size: 1.3rem;
+  color: var(--Grayish-Blue);
+}
+
+@media (max-width: 778px) {
+  .statics .container{
+    grid-template-columns: 1fr;
+    gap:150px;
+  }
+  .statics .container .section .value span {
+    width:100%;
+  }
+}
+/*======================================================*/
+.cards{
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+.cards  .card {
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--Very-Pale-Cyan);
+  width: 100%;
+  margin-top: -10px;
+}
+.cards  .card.even{
+  flex-direction: row-reverse;
+  background-color: white;
+}
+.cards .card .text h2{
+font-family: 'Open Sans', sans-serif;
+font-size: 3rem;
+}
+.cards  .card .text p{
+  font-family: 'Poppins', sans-serif;
+  width: 500px;
+  line-height: 1.4;
+  color: var(--Grayish-Blue);
+  font-weight: normal;
+}
+.cards  .card .image {
+  position: relative;
+  max-width: 100%;
+}
+.cards  .card .image img {
+  display: block;
+  max-width: 100%;
+  width:400px;
+  margin: auto auto;
+}
+@media (max-width: 778px) {
+
+  .cards .card, .cards .card.even {
+    flex-direction: column-reverse;
+    height: fit-content;
+    padding: 50px 0;
+    gap: 50px;
+    text-align: center;
+  }
+  .cards .card .text p {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+/* =================================== */
+.centerd-box{
+  width:100%;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 100px;
+}
+.centerd-box h1{
+  font-size: 3rem;
+}
+.centerd-box a {
+  display: block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  width: 300px;
+  padding: 20px 0;
+  background-color: var(--Pink);
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+.centerd-box a:hover{
+  opacity: 0.5;
+}
+/* ========================================================== */
+.footer{
+  width:100%;
+  margin: 0 auto;
+  margin-top: -10px;
+  background-color: var(--Very-Dark-Cyan);
+  padding: 50px 0 50px 100px;
+}
+.footer .container {
+  margin-top: 20px;
+  color:white;
+  display: flex;
+  gap:50px;
+}
+
+.footer .container .box img{
+  margin-bottom: 30px;
+}
+.footer .container .box .line{
+  display: flex;
+  gap:40px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer .container .box .line span{
+  width:70%;
+  line-height: 1.4;
+}
+.footer .container .box .social {
+  margin-top: 50px;
+  display: flex;
+  gap:30px;
+}
+.footer .container .box .social a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+.footer .container .box .social a:hover{
+  color: #1dcaff;
+}
+.footer .container .box h3{
+  margin-top: 0;
+  font-size: 2rem;
+}
+.footer .container .box p{
+  width:70%;
+  line-height: 1.4;
+}
+
+.footer .container .box .subscribe{
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.footer .container .box .subscribe input[type="email"]{
+  padding:15px;
+  width:50%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.footer .container .box .subscribe button{
+  font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    padding:15px;
+    width: 150px;
+    background-color: var(--Pink);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.footer .container .box .subscribe button:hover{
+    opacity: 0.7;
+}
+
+.footer .container .box .subscribe.error::before{
+  content: "Check your email please";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  color: red;
+}
+
+@media (max-width: 778px) {
+  .footer{
+    padding: 30px 0;
+  }
+  .footer .container{
+    flex-direction: column-reverse;
+  }
+  .footer .container .box .subscribe{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .footer .container .box .subscribe input[type="email"]{
+    width:100%;
+  }
+  .footer .container .box .subscribe.error::before{
+    bottom: calc(50% - 20px);
+  }
+}
